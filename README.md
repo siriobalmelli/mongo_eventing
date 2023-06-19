@@ -11,7 +11,7 @@ Enter a development shell:
 
 Subscribe to events:
 
-    ./consumer.py
+    ./consumer.py  # multiple consumers can run in parallel
 
 Publish a new event:
 

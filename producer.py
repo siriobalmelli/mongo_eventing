@@ -10,11 +10,13 @@ new_event = {
     "random": randrange(2000),
 }
 
-bcs.find_one_and_update(
+obj = bcs.find_one_and_update(
     # find the desired broadcast
     {"broadcast": randrange(10)},
     # update it
-    {"$push": {"alarms": new_event}},
+    {"$push": {"alarms": new_event}, "$set": {"handled": False}},
     # create it if not existing
     upsert=True,
+    return_document=True,
 )
+print(f"updated: {obj}")
