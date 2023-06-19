@@ -16,3 +16,7 @@ Subscribe to events:
 Publish a new event:
 
     ./producer.py
+
+Mongo shell on database:
+
+    ./client.sh
